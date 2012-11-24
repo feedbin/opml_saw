@@ -1,6 +1,6 @@
-# OpmlSaw
+# OPML Saw
 
-TODO: Write a gem description
+Parse OPML into a flat hash. OPML Saw supports nesting (folders) through the tag attribute. the most immediate parent of the outline will become the tag.
 
 ## Installation
 
@@ -18,12 +18,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+`subscriptions.xml`
 
-## Contributing
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Subscriptions</title>
+    </head>
+    <body>
+        <outline text="Riding Rails - home" title="Riding Rails - home" type="rss" xmlUrl="http://feeds.feedburner.com/RidingRails" htmlUrl="http://weblog.rubyonrails.org/"/>
+    </body>
+</opml>
+```
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+```ruby
+
+file = File.open('subscriptions.xml', 'r')
+contents = file.read
+opml = OpmlSaw::Parser.new(contents)
+opml.parse
+pp opml.feeds
+#=>
+[{
+  :text     => "Riding Rails - home",
+  :title    => "Riding Rails - home",
+  :type     => "rss",
+  :xml_url  => "http://feeds.feedburner.com/RidingRails",
+  :html_url => "http://weblog.rubyonrails.org/",
+  :tag      => nil
+}]
+```

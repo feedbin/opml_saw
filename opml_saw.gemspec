@@ -8,12 +8,14 @@ Gem::Specification.new do |gem|
   gem.version       = OpmlSaw::VERSION
   gem.authors       = ["Ben Ubois"]
   gem.email         = ["ben@benubois.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{TODO: Parse OPML into a flat hash.}
+  gem.summary       = %q{TODO: Parse OPML into a flat hash.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  
+  gem.add_runtime_dependency "nokogiri"
 end
