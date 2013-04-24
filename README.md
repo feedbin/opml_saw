@@ -6,7 +6,7 @@ Parse OPML into a flat hash. OPML Saw supports nesting (folders) through the tag
 
 Add this line to your application's Gemfile:
 
-    gem 'opml_saw'
+    gem 'opml_saw', :git => "git://github.com/feedbin/opml_saw.git", :branch => "master"
 
 And then execute:
 
