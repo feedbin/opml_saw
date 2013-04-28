@@ -27,7 +27,8 @@ module OpmlSaw
         if is_outline?(node)
           outline = Outline.new(node, tag).to_hash
           if has_children?(node)
-            parse(node.children, outline[:title])
+            title = outline[:title] || outline[:text]
+            parse(node.children, title)
           else
             @feeds << outline
           end
