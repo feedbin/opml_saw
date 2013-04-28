@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Ben subscriptions in Google Reader</title>
+    </head>
+    <body>
+        <outline text="Zach Holman" title="Zach Holman" type="rss"
+            xmlUrl="http://feeds.feedburner.com/holman" htmlUrl="http://zachholman.com/"/>
+        <outline text="Zimbra :: Gallery" title="Zimbra :: Gallery"
+            type="rss" xmlUrl="http://gallery.zimbra.com/rss.xml" htmlUrl="http://gallery.zimbra.com"/>
+        <outline text="陳 Jon Tan" title="陳 Jon Tan" type="rss"
+            xmlUrl="http://feeds.feedburner.com/jontangerine" htmlUrl="http://jontangerine.com/"/>
+        <outline
+            text="7x7 - Insider's Guide to the Best of San Francisco"
+            title="7x7 - Insider's Guide to the Best of San Francisco"
+            type="rss" xmlUrl="http://www.7x7.com/feed" htmlUrl="http://www.7x7.com/feed"/>
+        <outline title="News" text="News">
+            <outline
+                text="7x7 - Insider's Guide to the Best of San Francisco"
+                title="7x7 - Insider's Guide to the Best of San Francisco"
+                type="rss" xmlUrl="http://www.7x7.com/feed" htmlUrl="http://www.7x7.com/feed"/>
+        </outline>
+        <outline title="More News" text="More News">
+            <outline
+                text="7x7 - Insider's Guide to the Best of San Francisco"
+                title="7x7 - Insider's Guide to the Best of San Francisco"
+                type="rss" xmlUrl="http://www.7x7.com/feed" htmlUrl="http://www.7x7.com/feed"/>
+        </outline>
+    </body>
+</opml>
